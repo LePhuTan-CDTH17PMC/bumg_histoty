@@ -65,10 +65,17 @@
                         <a href="#" class="thumbnail">
                           <img  class="img-fluid" style="height:150px;weight:150px;" src="{{asset('assets/images/'.$tin_tuc->anh_dai_dien) }}" alt="err">
                         </a>
+<<<<<<< Updated upstream
                         <h3 class="mb-0"><a href="/{{$tin_tuc->id}}">Tin tức {{$tin_tuc->id}}</a></h3>
                         <div class="mb-3">
                               <a >Tạo vào</a> {{$tin_tuc->created_at}}
                               <p>Nội dung: <html>{{$tin_tuc->mo_ta_tt}}</html></p>
+=======
+                        <h3 class="mb-0"><a href="/home-page/{{$tin_tuc->id}}">Tin tức {{$tin_tuc->id}}</a></h3>
+                        <div class="mb-3">
+                              <a >Tạo vào</a> {{$tin_tuc->created_at}}
+                              <p>Nội dung: <html>{{$tin_tuc->tieu_de}}</html></p>
+>>>>>>> Stashed changes
                         </div>
                       </div>
                   </div>

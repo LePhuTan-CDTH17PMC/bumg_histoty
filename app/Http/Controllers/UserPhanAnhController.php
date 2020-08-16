@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\PhanAnh;
+<<<<<<< Updated upstream
+=======
+use App\Events\HelloPusherEvent;
+use Carbon\Carbon;
+>>>>>>> Stashed changes
 
 class UserPhanAnhController extends Controller
 {
@@ -38,16 +43,30 @@ class UserPhanAnhController extends Controller
     {
         $this->validate($request,[
             'noi_dung_pa'=>'required',
+<<<<<<< Updated upstream
+=======
+            'tieu_de_pa'=>'required',
+>>>>>>> Stashed changes
             
 
         ]);
 
         $phananh=new PhanAnh;
+<<<<<<< Updated upstream
         $phananh->nhan_vien_id=0;
+=======
+        $phananh->tieu_de_pa= $request->tieu_de_pa;
+        $phananh->nhan_vien_id=0;
+        $phananh->ngay_tao=Carbon::now();
+>>>>>>> Stashed changes
         $phananh->tinh_trang_xl=0;
         $phananh->noi_dung_pa= $request->noi_dung_pa;
         $phananh->chu_ho_id=Auth::guard('canho')->user()->id;
         $phananh->save();
+<<<<<<< Updated upstream
+=======
+        event(new HelloPusherEvent($request));
+>>>>>>> Stashed changes
 
         return redirect('/thong-bao')->with('success','Add success');
     }

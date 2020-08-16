@@ -58,7 +58,11 @@ class UserThongBaoController extends Controller
     public function show($id)
     {
         $thongbao=DB::table('thongbao')->orderBy('id', 'desc')->get();
+<<<<<<< Updated upstream
         $thongbao2= ThongBao::find();
+=======
+        $thongbao2= ThongBao::find($id);
+>>>>>>> Stashed changes
         return view('user.user-chitietthongbao',compact('thongbao','thongbao2'));
     }
 

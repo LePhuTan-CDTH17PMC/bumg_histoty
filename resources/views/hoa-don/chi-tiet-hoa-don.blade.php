@@ -34,7 +34,15 @@
 <div class="row">
     <div class="col-12">
         <div class="page-title-box">
+<<<<<<< Updated upstream
             <h4 class="page-title">Chi tiết hóa đơn</h4>         
+=======
+            <h4 class="page-title">Hóa đơn căn hộ:  @if(count($canho)==1)   
+                            @foreach($canho as $canho_name)
+                                <a>{{$canho_name->name_ch}}</a>
+                            @endforeach
+                        @endif</h4>         
+>>>>>>> Stashed changes
             <!-- @if (isset($quanTriViens))
                 <a href="{{ route('quan-tri-vien.thung-rac') }}" style="margin-bottom:10px;" class="btn btn-info waves-effect waves-light">Xem quản trị viên đã xóa</a>
             @endif -->

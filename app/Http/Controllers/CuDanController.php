@@ -16,7 +16,11 @@ class CuDanController extends Controller
      */
     public function index()
     {
+<<<<<<< Updated upstream
         $cudan= DB::select('SELECT cudan.id as cu_dan_id, ho_ten_cd, CMND, email, SDT, ng_sinh, can_ho_id, quanhe.ten_quan_he as quanhe FROM cudan, quanhe where   cudan.quan_he_id=quanhe.id and cudan.deleted_at IS NULL ');
+=======
+        $cudan= DB::select('SELECT cudan.id as cu_dan_id, ho_ten_cd, CMND, email, SDT, ng_sinh, can_ho_id, quanhe.ten_quan_he as quanhe FROM cudan, quanhe where  cudan.deleted_at is Null and cudan.quan_he_id=quanhe.id');
+>>>>>>> Stashed changes
         return view('cu-dan.danh-sach-cu-dan')->with('cudan',$cudan);
     }
 

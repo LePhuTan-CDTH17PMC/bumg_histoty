@@ -25,6 +25,17 @@
                  {{$errors}}
                 @endif
                 {!!Form::open(['action' => ['UserPhanAnhController@store'],'method'=> 'POST']) !!} 
+<<<<<<< Updated upstream
+=======
+                <div class="form-group">
+                        {{Form::label('title','Tiêu đề')}}<span class="text-danger"> 
+                        *</span>
+                        <div class="form-group">
+                            {{Form::Text('tieu_de_pa','',['class'=> 'form-control','placeholder'=>'Nhập nội dung'])}}
+                        </div> 
+                        
+                    </div>
+>>>>>>> Stashed changes
                     <div class="form-group">
                         {{Form::label('title','Nội dung')}}<span class="text-danger"> 
                         *</span>

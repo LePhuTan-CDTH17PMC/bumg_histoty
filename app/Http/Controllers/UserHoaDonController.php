@@ -3,7 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< Updated upstream
 
+=======
+use App\HoaDon;
+use Auth;
+use DB;
+>>>>>>> Stashed changes
 class UserHoaDonController extends Controller
 {
     /**
@@ -13,7 +19,13 @@ class UserHoaDonController extends Controller
      */
     public function index()
     {
+<<<<<<< Updated upstream
         return view('user.user-hoadon');
+=======
+        $canho=Auth::guard('canho')->user()->id;
+        $hoadon=DB::select('SELECT * From hoadon where  can_ho_id='.$canho);
+        return view('user.user-hoadon')->with('hoadon',$hoadon);
+>>>>>>> Stashed changes
     }
 
     /**
@@ -45,7 +57,13 @@ class UserHoaDonController extends Controller
      */
     public function show($id)
     {
+<<<<<<< Updated upstream
         //
+=======
+        $cthoadon= DB::select('SELECT dichvu.ten_dich_vu as ten_dv, dichvu.don_vi as don_vi, dichvu.phi_dv as phi_dv, chitiethoadon.so_luong as so_luong, chitiethoadon.thanh_tien as thanh_tien from chitiethoadon, dichvu where dichvu.id=chitiethoadon.dich_vu_id and hoa_don_id='.$id);
+        $hoadon=HoaDon::find($id);
+        return view('user.user-chitiethoadon',compact('cthoadon','hoadon'));
+>>>>>>> Stashed changes
     }
 
     /**

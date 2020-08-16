@@ -29,7 +29,11 @@ class SendMail extends Mailable
     public function build()
     {
         $subkect = "Thông báo từ PT Home's";
+<<<<<<< Updated upstream
         return $this->from('john@webslesson.info')->subject($subkect)->view('dynamic_email_template')->with('data', $this->data);
+=======
+        return $this->from('vuongtrieuvictory1999@gmail.com')->subject($subkect)->view('dynamic_email_template')->with('data', $this->data);
+>>>>>>> Stashed changes
     }
 }
 

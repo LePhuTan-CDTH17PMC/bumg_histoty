@@ -14,19 +14,28 @@
             <a class="button" href="/user-hoa-don">Hóa đơn</a>
         </div>
         <div>
+<<<<<<< Updated upstream
             <a class="button" href="#">Phương tiện</a>
+=======
+            <a class="button" href="/user-phuong-tien">Phương tiện</a>
+>>>>>>> Stashed changes
         </div>
         <div>
             <a class="button" href="/phan-anh">Phản ánh</a>
         </div>
         <div>
+<<<<<<< Updated upstream
             <a class="button button2 "  href="logout">Đăng xuất</a>
+=======
+            <a class="button button2 "  href="user-logout">Đăng xuất</a>
+>>>>>>> Stashed changes
         </div>
         <div>
             <a class=" name" style="" href="#">Xin chào {{Auth('canho')->user()->name}}</a>
         </div>
     </div>
 </div>
+<<<<<<< Updated upstream
 
 <style>
 
@@ -66,5 +75,8 @@
     height:62.5px;
     }
     
+=======
+<link href="{{ asset('assets/css/user-style.css') }}" rel="stylesheet') }}" />
+>>>>>>> Stashed changes
 
 </style>

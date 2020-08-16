@@ -42,6 +42,7 @@
 </div>
 
 <!-- Css cho trang -->
+<<<<<<< Updated upstream
 <style>
     * {
     box-sizing: border-box;
@@ -183,4 +184,7 @@
         /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
     
 </style>
+=======
+
+>>>>>>> Stashed changes
 @endsection

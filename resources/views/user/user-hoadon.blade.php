@@ -11,6 +11,7 @@
   
     <link href="{{ asset('assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
 @endsection
+<<<<<<< Updated upstream
 @section('main-content')
 <!-- start page title -->
         
@@ -168,4 +169,51 @@
         /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
     
 </style>
+=======
+@section('js')
+
+    
+@endsection
+@section('main-content')
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <table  class="table dt-responsive nowrap">
+                    <thead>
+                        <tr style="background-color: #6c757d;; color:white">
+                            <th>ID</th>
+						    <th>Tổng tiền</th>      
+						    <th> Tinh trạng</th>   
+                            <th></th>                    
+                       </tr>
+                    @if(count($hoadon)>0)
+                        @foreach($hoadon as $hoa_don)
+                            <tr>
+                                <th>{{$hoa_don->id}}</th>
+                                <th>{{$hoa_don->tong_tien}}</th>
+                                <th>
+                                    @if(($hoa_don->tinh_trang_tt)==0) 
+                                        Chưa thanh toán
+                                        @else
+                                        Đã Thanh toán
+                                    @endif    
+                                </th>
+                                <th><a href="/user-hoa-don/{{$hoa_don->id}}">Xem chi tiết</a></th>
+                            </tr>
+                        @endforeach
+                    @endif
+
+                    </thead>
+                    
+                </table>
+            </div> <!-- end card body-->
+        </div> <!-- end card -->
+    </div><!-- end col-->
+</div>        
+
+
+<!-- Css cho trang -->
+>>>>>>> Stashed changes
 @endsection

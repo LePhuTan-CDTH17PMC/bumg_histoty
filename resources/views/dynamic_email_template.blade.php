@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <form > 
 <>Trân Trọntrg Kính Chào!!</tr>
 <table style= 'boder: 2px  solid;'>
@@ -8,3 +9,8 @@
     <tr><p style = 'color:red'>{{ $data['message'] }}</p></tr>
 </table>
 </form>
+=======
+<p>Hế lu {{ $data['name'] }}</p>
+<p>{{ $data['message'] }}.</p>
+<p></p>
+>>>>>>> Stashed changes
